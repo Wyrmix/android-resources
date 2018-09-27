@@ -1,0 +1,313 @@
+= Libraries
+:toc:
+
+Here are some useful Android libraries broken up by language and feature.
+
+== Java
+
+=== Code Generation
+
+==== AutoValue
+
+AutoValue provides an easier way to create immutable value classes, with a lot less code and less room for error, while not restricting your freedom to code almost any aspect of your class exactly the way you want it.
+
+https://github.com/google/auto/tree/master/value[Source]
+
+==== Retrolambda
+
+Retrolambda lets you run Java 8 code with lambda expressions, method references and try-with-resources statements on Java 7, 6 or 5. It does this by transforming your Java 8 compiled bytecode so that it can run on an older Java runtime. After the transformation they are just a bunch of normal .class files, without any additional runtime dependencies.
+
+https://github.com/orfjackal/retrolambda[Source]
+
+=== Unit Testing
+
+==== JUnit
+
+JUnit is a simple framework to write repeatable tests. It is an instance of the xUnit architecture for unit testing frameworks.
+
+http://junit.org/junit4/[Homepage]
+
+https://github.com/junit-team/junit4[Source]
+
+==== Mockito
+
+Mockito offers simple and intuitive approach to object mocking, you ask questions about interactions after execution.
+
+http://site.mockito.org/[Homepage]
+
+https://github.com/mockito/mockito[Source]
+
+==== Spock
+
+Spock is a testing and specification framework for Java and Groovy applications.
+Spock tests are highly expressive and follow the "Arrange Act Assert" style by default.
+
+IMPORTANT: Spock requires a different setup proceedure on Android than in normal Gradle projects. https://github.com/robospock/RoboSpock[Robospock] can be used to simplify the setup process, and requires the https://github.com/groovy/groovy-android-gradle-plugin[Groovy Android Plugin]
+
+http://spockframework.org/[Homepage]
+
+http://spockframework.org/spock/docs/1.1-rc-3/index.html[Documentation]
+
+https://github.com/spockframework[Source]
+
+==== Truth
+
+Truth is an open source, fluent testing framework for Java that is designed to make your test assertions and failure messages more readable, as well as other benefits. It natively supports many JDK types (e.g., Iterable, String, Map) and Guava types (e.g., Optional, Multimap, Multiset, Table), and is also extensible to new types (YourCustomType).
+
+https://google.github.io/truth/[Homepage]
+
+https://github.com/google/truth[Source]
+
+== Kotlin
+
+=== Concurrency
+
+==== Coroutines
+
+`kotlinx.coroutines` is a rich library for coroutines developed by JetBrains. It contains a number of high-level coroutine-enabled primitives including launch, async and others. Essentially, coroutines are light-weight threads. They are launched with launch coroutine builder in a context of some `CoroutineScope`.
+
+https://kotlinlang.org/docs/reference/coroutines.html[Reference]
+
+https://github.com/Kotlin/kotlin-coroutines[Source]
+
+https://github.com/Kotlin/kotlinx.coroutines/blob/master/docs/coroutines-guide.md[Guide]
+
+=== Dependency Injection
+
+==== Koin
+
+A pragmatic lightweight dependency injection framework for Kotlin developers. Written in pure Kotlin using functional resolution only: no proxy, no code generation, no reflection! 
+
+https://insert-koin.io/[Website]
+
+https://github.com/InsertKoinIO/koin[Source]
+
+=== Functional
+
+==== FunKTional
+
+Functional constructs and patterns for Kotlin
+
+https://github.com/MarioAriasC/funKTionale[Source]
+
+=== Unit Testing
+
+==== Kluent
+
+Kluent is a “Fluent Assertions” library written specifically for Kotlin.
+
+It uses the Infix-Notations and Extension Functions of Kotlin to provide a fluent wrapper around JUnit-Asserts and Mockito.
+
+https://markusamshove.github.io/Kluent/[Website]
+
+https://github.com/MarkusAmshove/Kluent[Source]
+
+==== Mockito Kotlin
+
+A small library that provides helper functions to work with Mockito in Kotlin.
+
+https://github.com/nhaarman/mockito-kotlin[Source]
+
+==== Spek
+
+BDD Framework similar to RSpec for Ruby or Spock for Groovy
+
+https://spekframework.org/[Homepage]
+
+https://github.com/spekframework/spek[Source]
+
+== Either
+
+=== Android
+
+==== AndroidX
+
+Going forward, the android.* package hierarchy will be reserved for Android packages that ship with the operating system. Other packages will be issued in the new androidx.* package hierarchy as part of the AndroidX library.
+
+Existing packages, such as the Android Support Library, are being refactored into AndroidX. Although Support Library versions 27 and lower are still available on Google Maven, all new development will be included in only AndroidX versions 1.0.0 and higher.
+
+For a full mapping of all the old classes and build artifacts to the new ones, see the https://developer.android.com/topic/libraries/support-library/refactor[AndroidX refactoring page]. For more information about the AndroidX refactor, see the https://android-developers.googleblog.com/2018/05/hello-world-androidx.html[blog post].
+
+https://developer.android.com/topic/libraries/support-library/androidx-overview[Library Page]
+
+==== Jetpack
+
+Jetpack is a collection of Android software components to make it easier for you to develop great Android apps. These components help you follow best practices, free you from writing boilerplate code, and simplify complex tasks, so you can focus on the code you care about.
+
+Jetpack comprises the androidx.* package libraries, unbundled from the platform APIs. This means that it offers backward compatibility and is updated more frequently than the Android platform, making sure you always have access to the latest and greatest versions of the Jetpack components.
+
+https://developer.android.com/jetpack/[Project Home]
+
+=== Animation
+
+==== Sparkle Motion
+
+Sparkle Motion is an animation library dedicated to animate ViewPager elements.
+
+Sparkle Motion supports cross page animations, meaning that you can animate Views outside of ViewPager based on the ViewPager's scrolling, thus achieve cross-page animations. This is done through Decor and SparkleViewPagerLayout. By using them, you can specify Views that you want to animate through multiple pages, and the animations on them will be controlled by the OnPageChangeListener.
+
+https://github.com/IFTTT/SparkleMotion[Source]
+
+=== Debug Utilities
+
+==== Chuck
+
+Chuck is a simple in-app HTTP inspector for Android OkHttp clients. Chuck intercepts and persists all HTTP requests and responses inside your application, and provides a UI for inspecting their content.
+
+https://github.com/jgilfelt/chuck[Source]
+
+==== Debug Drawer
+
+Faster development with Debug Drawer
+
+https://github.com/palaima/DebugDrawer[Source]
+
+==== Fakeit
+
+This library is a port of the Ruby gem Faker. It generates realistic fake data — like names, emails, dates, countries — for a variety of scenarios, including automated testing and database population.
+
+The library was originally created for Android projects, but it can be used in any Java or Kotlin project.
+
+https://github.com/moove-it/fakeit[Source]
+
+==== Lynx
+
+Lynx is an Android library created to show a custom view with all the information Android logcat is printing, different traces of different levels will be rendererd to show from log messages to your application exceptions. You can filter this traces, share your logcat to other apps, configure the max number of traces to show or the sampling rate… 
+
+https://github.com/pedrovgs/Lynx[Source]
+
+==== Stetho
+
+Stetho is a sophisticated debug bridge for Android applications. When enabled, developers have access to the Chrome Developer Tools feature natively part of the Chrome desktop browser. Developers can also choose to enable the optional dumpapp tool which offers a powerful command-line interface to application internals. 
+
+http://facebook.github.io/stetho/[Website]
+
+https://github.com/facebook/stetho[Source]
+
+==== Timber
+
+This is a logger with a small, extensible API which provides utility on top of Android's normal Log class.
+
+https://github.com/JakeWharton/timber[Source]
+
+=== Dependency Injection
+
+==== Dagger
+
+Dagger is a fully static, compile-time dependency injection framework for both Java and Android. It is an adaptation of an earlier version created by Square and now maintained by Google.
+
+https://google.github.io/dagger/[Homepage]
+
+https://github.com/google/dagger[Source]
+
+=== Image Loading
+
+==== Fresco
+
+Fresco is a powerful system for displaying images in Android applications. It takes care of image loading and display so you don’t have to. Fresco supports Android 2.3 (Gingerbread) and later.
+
+https://frescolib.org/[Website]
+
+https://github.com/facebook/fresco[Source]
+
+==== Glide
+
+Glide is a fast and efficient image loading library for Android focused on smooth scrolling. Glide offers an easy to use API, a performant and extensible resource decoding pipeline and automatic resource pooling.
+
+Glide supports fetching, decoding, and displaying video stills, images, and animated GIFs. Glide includes a flexible api that allows developers to plug in to almost any network stack. By default Glide uses a custom HttpUrlConnection based stack, but also includes utility libraries plug in to Google’s Volley project or Square’s OkHttp library instead.
+
+https://bumptech.github.io/glide/[Website]
+
+https://github.com/bumptech/glide[Source]
+
+=== RecyclerView
+
+==== Epoxy
+
+Epoxy is an Android library for building complex screens in a RecyclerView. Models are automatically generated from custom views, databinding layouts, or Litho components via annotation processing. These models are then used in an EpoxyController to declare what items to show in the RecyclerView.
+
+This abstracts the boilerplate of view holders, diffing items and binding payload changes, item types, item ids, span counts, and more, in order to simplify building screens with multiple view types. Additionally, Epoxy adds support for saving view state and automatic diffing of item changes.
+
+https://github.com/airbnb/epoxy[Source]
+
+==== Groupie
+
+Groupie is a simple, flexible library for complex RecyclerView layouts.
+Groupie lets you treat your content as logical groups and handles change notifications for you -- think sections with headers and footers, expandable groups, blocks of vertical columns, and much more. It makes it easy to handle asynchronous content updates and insertions and user-driven content changes. At the item level, it abstracts the boilerplate of item view types, item layouts, viewholders, and span sizes.
+
+https://github.com/lisawray/groupie[Source]
+
+=== Media Playback
+
+==== Exo Player
+
+ExoPlayer is an application level media player for Android. It provides an alternative to Android’s MediaPlayer API for playing audio and video both locally and over the Internet. ExoPlayer supports features not currently supported by Android’s MediaPlayer API, including DASH and SmoothStreaming adaptive playbacks. Unlike the MediaPlayer API, ExoPlayer is easy to customize and extend, and can be updated through Play Store application updates.
+
+https://google.github.io/ExoPlayer/guide.html[Guide]
+
+https://github.com/google/ExoPlayer[Source]
+
+==== Video Cache
+
+Why AndroidVideoCache?
+
+Because there is no sense to download video a lot of times while streaming! AndroidVideoCache allows to add caching support to your VideoView/MediaPlayer, ExoPlayer or any another player with help of single line!
+
+https://github.com/danikula/AndroidVideoCache[Source]
+
+=== Networking
+
+==== OkHttp
+
+HTTP is the way modern applications network. It’s how we exchange data & media. Doing HTTP efficiently makes your stuff load faster and saves bandwidth.
+
+OkHttp is an HTTP client that’s efficient by default:
+
+- HTTP/2 support allows all requests to the same host to share a socket.
+- Connection pooling reduces request latency (if HTTP/2 isn’t available).
+- Transparent GZIP shrinks download sizes.
+- Response caching avoids the network completely for repeat requests.
+
+https://square.github.io/okhttp/[Homepage]
+
+https://github.com/square/okhttp[Source]
+
+==== OkIo
+
+Okio is a new library that complements java.io and java.nio to make it much easier to access, store, and process your data.
+
+https://github.com/square/okio[Source]
+
+==== Retrofit
+
+Retrofit turns your HTTP API into a Java interface.
+
+https://square.github.io/retrofit/[Homepage]
+
+https://github.com/square/retrofit[Source]
+
+=== UI Testing
+
+==== Espresso
+
+https://google.github.io/android-testing-support-library/docs/espresso/[Documentation]
+
+==== RxEspresso
+
+https://github.com/stablekernel/RxEspresso[Source]
+
+=== View
+
+==== App Intro
+
+AppIntro is an Android Library that helps you make a cool intro for your app, like the ones in Google apps.
+
+https://github.com/apl-devs/AppIntro[Source]
+
+video::-KgAAbZz248[youtube]
+
+==== ViewPagerBottomSheet
+
+Use ViewPagers in Bottom Sheets and Bottom Sheet Dialogs!
+
+https://github.com/laenger/ViewPagerBottomSheet[Source]
